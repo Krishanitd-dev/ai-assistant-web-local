@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/history">History</a>
+            <a href="/about">About</a>
+        </nav>
+    <hr>
+    <h1> AI Assistant</h1>
+
+    <p>
+        Ask questions about programming, artificial intelligence, databases,
+        software development, or any other topic.
+    </p>
+
+    <hr>
+
+    <h2>Ask a Question</h2>
+
+    <form action="/ask" method="POST">
+
+        <textarea
+            name="question"
+            rows="6"
+            cols="80"
+            placeholder="Ask the AI anything..."
+            required></textarea>
+
+        <br><br>
+
+        <button type="submit"> Ask AI</button>
+       
+
+    </form>
+
+    <hr>
+
+    <h2>AI Response</h2>
+
+    <div class="response">
+          {% if answer %}
+
+        <p>{{ answer }}</p>
+
+    {% else %}
+
+        <p>The AI response will appear here after you submit your question.</p>
+
+    {% endif %}
+       
+        </div>
+
+    </div>
+
+</body>
+
+</html>

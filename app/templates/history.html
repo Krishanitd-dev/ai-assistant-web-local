@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>History</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/history">History</a>
+    <a href="/about">About</a>
+</nav>
+
+<hr>
+
+<h1>Conversation History</h1>
+
+
+{% for conversation in conversations %}
+
+<div class="history-card">
+
+<h3>Question</h3>
+<p>{{ conversation["question"] }}</p>
+
+
+<h3>Answer</h3>
+<p>{{ conversation["answer"] }}</p>
+
+</div>
+
+<hr>
+
+{% endfor %}
+
+
+</div>
+
+</body>
+
+</html>

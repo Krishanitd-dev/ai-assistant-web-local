@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 40px;
 }
-container {
+.container {
     width: 80%;
     max-width: 900px;
     margin: auto;
@@ -12,6 +12,27 @@ container {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.ai_image {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: 20px auto; 
+    animation: rotateAI 12s ease-in-out infinite;
+}
+@keyframes rotateAI {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    60% {
+        transform: rotateY(360deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 h1 {
@@ -38,9 +59,9 @@ button {
     background-color: #0077cc;
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 15px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -74,4 +95,35 @@ nav a {
 nav a:hover {
     color: #0077cc;
     text-decoration: underline;
+}
+
+.dark-btn {
+    background-color: black;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 16px;
+}
+
+.dark {
+    background:#121212;
+    color:white;
+}
+.dark .container {
+    background:#1e1e1e;
+
+}
+
+
+.dark textarea {
+    background:#333;
+    color:white;
+
+}
+
+
+.dark .card {
+    background:#222;
+    border-color:#555;
+
 }

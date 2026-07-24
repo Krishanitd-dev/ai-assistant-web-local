@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
@@ -17,7 +18,11 @@
             <a href="/about">About</a>
 
             <button id="darkModeBtn" class="dark-btn">
+<<<<<<< HEAD
+                 🌙 Dark Mode
+=======
                 Dark Mode
+>>>>>>> origin/main
             </button>
         </nav>
         
@@ -28,7 +33,12 @@
     <h1> AI Assistant</h1>
 
     <p>
+<<<<<<< HEAD
+        Your intelligent companion for programming, AI, databases, and software development. <br>
+        Ask questions. Get instant AI-powered answers.
+=======
         Your intelligent companion for programming, AI, databases, and software development.
+>>>>>>> origin/main
     </p>
 
     <hr>
@@ -43,7 +53,11 @@
             rows="6"
             cols="80"
             maxlength="5000"
+<<<<<<< HEAD
+            placeholder=""
+=======
             placeholder="Hi! I am your AI assistant. What are we working on today?"
+>>>>>>> origin/main
             required></textarea>
 
             <p> Characters:
@@ -53,7 +67,11 @@
 
         <br><br>
 
+<<<<<<< HEAD
+        <button type="submit"> ✨ Get Answer </button>
+=======
         <button type="submit"> Get Answer </button>
+>>>>>>> origin/main
        <p id="loading" style="display:none;">
         Generating response...
         </p>
@@ -69,15 +87,34 @@
 
         <p>{{ answer }}</p>
             <button onclick="copyResponse()">
+<<<<<<< HEAD
+            ⧉ Copy Response
+=======
             Copy Response
+>>>>>>> origin/main
             </button>
     {% else %}
 
-        <p>The AI response will appear here after you submit your question.</p>
+        <p>Your generated answer</p>
 
     {% endif %}
        
     </div>
+
+    <footer>
+    <hr>
+
+    <p>Built with</p>
+
+    <p>
+        Python • FastAPI • HTML • CSS • JavaScript
+    </p>
+
+    <p>
+        &copy; 2026 Krishani Dona
+    </p>
+
+</footer>
 
     </div>
     <script>
@@ -109,6 +146,29 @@
     document.getElementById("loading")
     .style.display="block";
     }
+
+</script>
+<script>
+
+
+
+const text = "Hi! I am your AI assistant. What are we working on today?";
+
+let index = 0;
+
+function typePlaceholder(){
+
+    if(index < text.length){
+
+        textarea.placeholder += text.charAt(index);
+        index++;
+
+        setTimeout(typePlaceholder, 80);
+    }
+
+}
+
+typePlaceholder();
 
 </script>
 

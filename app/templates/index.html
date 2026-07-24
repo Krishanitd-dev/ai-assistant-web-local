@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
@@ -15,32 +16,49 @@
             <a href="/">Home</a>
             <a href="/history">History</a>
             <a href="/about">About</a>
+
+            <button id="darkModeBtn" class="dark-btn">
+                 🌙 Dark Mode
+            </button>
         </nav>
+        
     <hr>
+    <img src="/static/ai.png" 
+        alt="AI Assistant" 
+        class="ai_image">
     <h1> AI Assistant</h1>
 
     <p>
-        Ask questions about programming, artificial intelligence, databases,
-        software development, or any other topic.
+        Your intelligent companion for programming, AI, databases, and software development. <br>
+        Ask questions. Get instant AI-powered answers.
     </p>
 
     <hr>
 
     <h2>Ask a Question</h2>
 
-    <form action="/ask" method="POST">
+    <form action="/ask" method="POST" onsubmit="showLoading()">
 
         <textarea
+            id="questionBox"
             name="question"
             rows="6"
             cols="80"
-            placeholder="Ask the AI anything..."
+            maxlength="5000"
+            placeholder=""
             required></textarea>
+
+            <p> Characters:
+                <span id="counter">0</span> / 5000
+
+            </p>
 
         <br><br>
 
-        <button type="submit"> Ask AI</button>
-       
+        <button type="submit"> ✨ Get Answer </button>
+       <p id="loading" style="display:none;">
+        Generating response...
+        </p>
 
     </form>
 
@@ -48,20 +66,91 @@
 
     <h2>AI Response</h2>
 
-    <div class="response">
+    <div class="response" id="aiResponse">
           {% if answer %}
 
         <p>{{ answer }}</p>
-
+            <button onclick="copyResponse()">
+            ⧉ Copy Response
+            </button>
     {% else %}
 
-        <p>The AI response will appear here after you submit your question.</p>
+        <p>Your generated answer</p>
 
     {% endif %}
        
-        </div>
+    </div>
+
+    <footer>
+    <hr>
+
+    <p>Built with</p>
+
+    <p>
+        Python • FastAPI • HTML • CSS • JavaScript
+    </p>
+
+    <p>
+        &copy; 2026 Krishani Dona
+    </p>
+
+</footer>
 
     </div>
+    <script>
+    const button = document.getElementById("darkModeBtn");
+
+    button.onclick = function(){
+    document.body.classList.toggle("dark");
+    }
+    </script>
+    <script>
+    const textarea = document.getElementById("questionBox");
+    const counter = document.getElementById("counter");
+    textarea.addEventListener("input", function(){
+    counter.textContent = textarea.value.length;
+    });
+    </script>
+
+    <script>
+    function copyResponse(){
+    let text =
+    document.getElementById("aiResponse").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Response copied!");
+    }
+    </script>
+
+    <script>
+    function showLoading(){
+    document.getElementById("loading")
+    .style.display="block";
+    }
+
+</script>
+<script>
+
+
+
+const text = "Hi! I am your AI assistant. What are we working on today?";
+
+let index = 0;
+
+function typePlaceholder(){
+
+    if(index < text.length){
+
+        textarea.placeholder += text.charAt(index);
+        index++;
+
+        setTimeout(typePlaceholder, 80);
+    }
+
+}
+
+typePlaceholder();
+
+</script>
 
 </body>
 

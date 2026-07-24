@@ -196,17 +196,10 @@ nav a:hover {
 }
 
 .dark-btn {
-<<<<<<< HEAD
     background:#111827;
     color:white;
     padding:8px 15px;
     border-radius:8px;
-=======
-    background-color: black;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
->>>>>>> origin/main
     margin-left: 16px;
 }
 
@@ -231,7 +224,6 @@ nav a:hover {
     background:#222;
     border-color:#555;
 
-<<<<<<< HEAD
 }
 
 footer {
@@ -250,6 +242,4 @@ footer p {
 
 .dark footer {
     color: #ccc;
-=======
->>>>>>> origin/main
 }

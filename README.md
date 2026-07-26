@@ -3,6 +3,7 @@ Frontend:
 HTML
 CSS
 Jinja2 templates
+JavaScript
 
 Backend:
 FastAPI (Python)
@@ -31,9 +32,13 @@ python -m venv venv
 
 python -m pip install fastapi uvicorn jinja2 python-dotenv openai python-multipart
 
+##### pdf
+pip install reportlab
+
 pip freeze > requirements.txt
 pip install -r requirements.txt
 
 
 ## Run 
+.\venv\Scripts\activate
 python -m uvicorn app.main:app --reload

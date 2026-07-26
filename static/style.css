@@ -192,6 +192,107 @@ button:disabled {
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
+.ai-text {
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.response-actions {
+
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    align-items: center;
+
+}
+
+
+.response-actions form {
+    margin: 0;
+}
+
+
+.response-actions button {
+
+    padding: 10px 18px;
+    font-size: 15px;
+
+}
+
+.response-actions button:first-child {
+    background: #2563eb;
+}
+
+.response-actions button:last-child {
+    background: #16a34a;
+}
+
+.history-question {
+    width: 100%;
+    text-align: left;
+    background: #eef2ff;
+    color: #1e40af;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.history-question:hover {
+
+    background:#dbeafe;
+
+}
+
+
+.history-answer {
+
+    display:none;
+    margin-top:15px;
+    padding:20px;
+    background:#f8fafc;
+    border-left:5px solid #2563eb;
+    border-radius:10px;
+
+}
+
+
+.history-answer h3 {
+
+    color:#2563eb;
+
+}
+
+.history-header {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+
+}
+
+
+.delete-button {
+
+    background:#dc2626;
+    color:white;
+    padding:10px 15px;
+    border-radius:8px;
+    border:none;
+    cursor:pointer;
+
+}
+
+
+.delete-button:hover {
+
+    background:#b91c1c;
+
+}
+
 footer {
     text-align: center;
     margin-top: 50px;

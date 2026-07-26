@@ -59,3 +59,15 @@ def get_all_conversations():
     conn.close()
 
     return rows
+
+def delete_conversation(id):
+    conn = get_connection()
+    conn.row_factory =sqlite3.Row
+
+    cursor =conn.cursor()
+    cursor.execute("""
+    DELETE FROM conversations
+    WHERE id = ?
+    """,(id,))
+    conn.commit()
+    conn.close()

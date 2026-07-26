@@ -20,28 +20,68 @@
 
 <h1>Conversation History</h1>
 
+<p>You have {{ conversations|length }} conversation(s).</p>
+<p>Click on a previous conversation to review your earlier learning, or delete it if you no longer need it.</p>
 
+{% if conversations %}
 {% for conversation in conversations %}
+    <div class="history-menu">
+    <div class="history-header">
+    <button class="history-question" onclick="toggleanswer('{{ loop.index }}')">
 
-<div class="history-card">
+    {{ conversation["question"] }}
+    </button>
+    <form method="post" 
+        action="/delete/{{ conversation['id'] }}"
+        onsubmit="return confirm('Are you sure you want to delete this conversation?');">
+        <button class="delete-button" type="submit">
+         Delete
+    </button>
+    </form>
+</div>
 
-<h3>Question</h3>
-<p>{{ conversation["question"] }}</p>
 
+    <div id="answer-{{ loop.index }}" class="history-answer">
+    <h3>Question</h3>
+    <p>{{ conversation["question"] }}</p>
 
-<h3>Answer</h3>
-<p>{{ conversation["answer"] }}</p>
+    <h3>Answer</h3>
+    <p>{{ conversation["answer"] }}</p>
 
+    </div>
 </div>
 
 <hr>
 
 {% endfor %}
+{% else %}
+<div class="no-history">
+    <h3> No Conversation History </h3>
+  
+</div>
+
+{% endif %}
+
+    <footer>
+    
+
+   
+
+    <p>
+         AI-generated responses powered by AI technology.
+    </p>
+
+    <p>
+        &copy;  Developed by Td Kris
+    </p>
+
+</footer>
+
 
 
 </div>
 
-
+<script src="/static/app.js"></script>
 
 </body>
 

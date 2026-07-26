@@ -37,11 +37,11 @@
 
     <h2>Ask a Question</h2>
 
-    <form action="/ask" method="POST" onsubmit="showLoading()">
+    <form method="post" action="/ask" id="askForm">
 
         <textarea
             id="questionBox"
-            name="question"
+            name="question" 
             rows="6"
             cols="80"
             maxlength="5000"
@@ -55,7 +55,7 @@
 
         <br><br>
 
-        <button type="submit"> ✨ Get Answer </button>
+        <button id="askButton" type="submit"> ✨ Get Answer </button>
        <p id="loading" style="display:none;">
         Generating response...
         </p>
@@ -82,7 +82,7 @@
     </div>
 
     <footer>
-    <hr>
+    
 
     <p>Built with</p>
 
@@ -97,61 +97,13 @@
 </footer>
 
     </div>
-    <script>
-    const button = document.getElementById("darkModeBtn");
-
-    button.onclick = function(){
-    document.body.classList.toggle("dark");
-    }
-    </script>
-    <script>
-    const textarea = document.getElementById("questionBox");
-    const counter = document.getElementById("counter");
-    textarea.addEventListener("input", function(){
-    counter.textContent = textarea.value.length;
-    });
-    </script>
-
-    <script>
-    function copyResponse(){
-    let text =
-    document.getElementById("aiResponse").innerText;
-    navigator.clipboard.writeText(text);
-    alert("Response copied!");
-    }
-    </script>
-
-    <script>
-    function showLoading(){
-    document.getElementById("loading")
-    .style.display="block";
-    }
-
-</script>
-<script>
+    
 
 
 
-const text = "Hi! I am your AI assistant. What are we working on today?";
-
-let index = 0;
-
-function typePlaceholder(){
-
-    if(index < text.length){
-
-        textarea.placeholder += text.charAt(index);
-        index++;
-
-        setTimeout(typePlaceholder, 80);
-    }
-
-}
-
-typePlaceholder();
-
-</script>
+<script src="/static/app.js"></script>
 
 </body>
 
 </html>
+

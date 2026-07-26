@@ -9,11 +9,13 @@ from app.database import save_conversation, get_all_conversations, create_table
 app = FastAPI()
 create_table()
 
-# CSS
+# CSS/ JavaScript
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # HTML
 templates = Jinja2Templates(directory="./app/templates")
+
+
 
 
 @app.get("/", response_class=HTMLResponse)

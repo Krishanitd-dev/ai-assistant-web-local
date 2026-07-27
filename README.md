@@ -16,6 +16,10 @@ Llama model
 Database:
 SQLite
 
+Deployment
+Vercel
+GitHub
+
 ## Features
 1. AI-Powered Question Answering
 2. Conversation Memory
@@ -30,15 +34,27 @@ python -m venv venv
 .\venv\Scripts\activate
 
 
-python -m pip install fastapi uvicorn jinja2 python-dotenv openai python-multipart
+python -m pip install fastapi uvicorn jinja2 python-dotenv openai python-multipart reportlab
+
 
 ##### pdf
 pip install reportlab
 
 pip freeze > requirements.txt
+
+
 pip install -r requirements.txt
 
 
 ## Run 
 .\venv\Scripts\activate
 python -m uvicorn app.main:app --reload
+
+## Vercel Deployment Notes
+This application uses SQLite for storing conversation history.
+For Vercel deployment, the database is stored in `/tmp` because the filesystem is read-only.
+/tmp data is temporary and may reset after server restarts.
+
+## Update
+
+Updated requirements.txt and saved it as UTF-8 encoding.

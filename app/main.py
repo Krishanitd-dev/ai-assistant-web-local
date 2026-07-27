@@ -36,7 +36,7 @@ async def ask_ai(request: Request, question: str = Form(...)):
 
     answer = get_ai_response(question)
 
-   # save_conversation(question, answer)
+    save_conversation(question, answer)
 
     return templates.TemplateResponse(
         request=request,

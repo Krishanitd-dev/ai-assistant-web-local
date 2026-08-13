@@ -17,16 +17,20 @@ Database:
 SQLite
 
 Deployment
-Vercel
 GitHub
 
 ## Features
-1. AI-Powered Question Answering
-2. Conversation Memory
-3.  Conversation History
-4.  Web-Based User Interface
-5. AI Model Integration
-6.  Database Integration
+User Authentication & Login
+User Registration
+Password Hashing & Secure Authentication
+Session Management
+Protected User Pages
+User-Specific Conversation DataAI-Powered Question Answering
+Conversation Memory
+Conversation History
+Web-Based User Interface
+AI Model Integration
+Database Integration
 
 ### installation
 
@@ -50,7 +54,4 @@ pip install -r requirements.txt
 .\venv\Scripts\activate
 python -m uvicorn app.main:app --reload
 
-## Vercel Deployment Notes
-This application uses SQLite for storing conversation history.
-For Vercel deployment, the database is stored in "/tmp" because the filesystem is read-only.
-/tmp data is temporary and may reset after server restarts.
+

@@ -41,6 +41,8 @@ pip install "pwdlib[argon2]"
 
 python -m pip install fastapi uvicorn jinja2 python-dotenv openai python-multipart reportlab
 
+pip install pytest httpx
+
 
 ##### pdf
 pip install reportlab

@@ -36,6 +36,7 @@ Database Integration
 
 python -m venv venv
 .\venv\Scripts\activate
+pip install "pwdlib[argon2]"
 
 
 python -m pip install fastapi uvicorn jinja2 python-dotenv openai python-multipart reportlab

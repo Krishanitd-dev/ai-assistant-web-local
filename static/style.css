@@ -1,3 +1,5 @@
+
+
 body {
     font-family: "Inter", "Segoe UI", sans-serif;
     background: linear-gradient(
@@ -9,6 +11,144 @@ body {
     margin: 0;
     padding: 40px;
 }
+
+
+
+body.login-page {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url("/static/bk-login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+body.login-page .login-container {
+    background: white;
+    width: 600px;
+    height: 500px;
+    min-height: 500px;
+    height: auto;
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+body.login-page .login-container h1 {
+    text-align: center;
+    margin: 0 0 30px 0;
+    color: #02041e;
+    font-size: 32px;
+}
+
+body.login-page .login-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #034978;
+}
+
+body.login-page .login-container input {
+    display: block;
+    width: 100%;
+
+    padding: 15px;
+    margin: 0 0 20px 0;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+}
+
+body.login-page .login-container button {
+    display: block;
+    width: 100%;
+
+    padding: 12px 25px;
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #022961;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+body.login-page .login-container button:hover {
+    background: rgb(55, 55, 179);
+    transform: none;
+}
+
+body.login-page .register-link {
+    text-align: center;
+    margin-top: 25px;
+
+    color: #475569;
+    font-size: 15px;
+}
+
+body.login-page .register-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+body.login-page .register-link a:hover {
+    text-decoration: underline;
+}
+
+.login-error {
+    text-align: center;
+    color: #dc2626 ;
+    font-size: 15px ;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 500px;
+        margin: 30px auto;
+        padding: 30px 25px;
+    }
+}
+
+.logout-message {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.aic-image {
+    width: 80px;
+    height:80px;
+    object-fit:contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+
+
 .container {
     width: 80%;
     max-width: 900px;
@@ -115,6 +255,12 @@ p {
     font-size: 16px;
 }
 
+@media 
+(max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
 
 .ai_image {
     display: block;

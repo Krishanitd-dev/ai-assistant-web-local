@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Page</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="login-page">
+
+    <div class="login-container">
+           <img src="/static/aic.png"
+             alt="AI Assistant"
+             class="aic-image">
+
+        <h1>Login Now</h1>
+         {% if logout_message %}
+         <p class="logout-message">{{ logout_message }}</p>
+        {% endif %}
+        
+        {% if error %}
+        <p class="login-error">{{ error }}</p>
+        {% endif %}
+
+        <form method="post" action="/login">
+
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="password">Password:</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit">Login</button>
+
+            <p class="register-link">
+                Don't have an account?
+                <a href="/register">Create an account</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+
+ 

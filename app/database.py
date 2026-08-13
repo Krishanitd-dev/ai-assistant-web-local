@@ -3,7 +3,7 @@ import os
 from pwdlib import PasswordHash
 password_hasher = PasswordHash.recommended()
 
-DATABASE = os.getenv("DATABASE", "conversation.db")
+DATABASE = "conversation.db"
 
 
 def get_connection():

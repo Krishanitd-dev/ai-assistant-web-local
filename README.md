@@ -25,7 +25,9 @@ User Registration
 Password Hashing & Secure Authentication
 Session Management
 Protected User Pages
-User-Specific Conversation DataAI-Powered Question Answering
+User-Specific Conversation Data
+AI-Powered Question Answering
+copy and download pdf
 Conversation Memory
 Conversation History
 Web-Based User Interface
